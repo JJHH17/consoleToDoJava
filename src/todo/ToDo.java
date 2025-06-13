@@ -7,8 +7,11 @@ public class ToDo {
     String priority;
     char completed;
 
-    public ToDo() {
+    public ToDo(String description, String priority, char completed) {
         id++;
+        setDescription(description);
+        setPriority(priority);
+        setCompleted(completed);
     }
 
     public void setDescription(String description) {
