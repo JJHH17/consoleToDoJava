@@ -5,12 +5,24 @@ public class ToDo {
     int id = 0;// Used for tracking todos
     String description;
     String priority;
-    byte completed;
+    char completed;
 
-    public ToDo(int id, String description, String priority, byte completed) {
+    public ToDo(int id, String description, String priority, char completed) {
         this.id = id;
         this.description = description;
         this.priority = priority;
+        this.completed = completed;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setPriority(String priority) {
+        this.priority = priority;
+    }
+
+    public void setCompleted(char completed) {
         this.completed = completed;
     }
 
