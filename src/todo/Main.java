@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // Array or map containing our to do entries
+
         Scanner input = new Scanner(System.in);
 
         System.out.println("Welcome to this To Do application!");
@@ -44,5 +46,10 @@ public class Main {
     // Method for when "Add" is entered by user
     public static void add(String description, String priority, char completed) {
         var newToDo = new ToDo(description, priority, completed);
+    }
+
+    // Method for when "View" is entered by user
+    public static void view(String[] args) {
+
     }
 }
