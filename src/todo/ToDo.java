@@ -2,13 +2,13 @@ package todo;
 
 // Class responsible for adding to do items
 public class ToDo {
-    int id = 0;// Used for tracking todos
+    static int id = 0; // Used for tracking todos
     String description;
     String priority;
     char completed;
 
-    public ToDo(int id) {
-        this.id = id;
+    public ToDo() {
+        id++;
     }
 
     public void setDescription(String description) {
