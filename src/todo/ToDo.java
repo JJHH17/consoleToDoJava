@@ -25,7 +25,7 @@ public class ToDo {
 
     // Fetches Task item
     public void getToDo() {
-        System.out.println("ID: " + this.id);
+        System.out.println("ID: " + id);
         System.out.println("Description: " + this.description);
         System.out.println("Priority: " + this.priority);
         System.out.println("Completed? " + this.completed);
