@@ -7,11 +7,8 @@ public class ToDo {
     String priority;
     char completed;
 
-    public ToDo(int id, String description, String priority, char completed) {
+    public ToDo(int id) {
         this.id = id;
-        this.description = description;
-        this.priority = priority;
-        this.completed = completed;
     }
 
     public void setDescription(String description) {
