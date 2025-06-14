@@ -35,7 +35,7 @@ public class Main {
                     break;
 
                 case "view":
-                    System.out.println("To also be continued");
+                    view();
                     break;
 
                 default:
@@ -53,6 +53,9 @@ public class Main {
     }
 
     // Method for when "View" is entered by user
-    public static void view(String[] args) {
+    public static void view() {
+        for (int i = 0; i < toDoItems.size(); i++) {
+            System.out.println(toDoItems);
+        }
     }
 }
