@@ -59,10 +59,7 @@ public class Main {
         } else {
             for (int i = 0; i < toDoItems.size(); i++) {
                 ToDo item = toDoItems.get(i); // used to iterate and print
-                System.out.println("ID: " + item.id);
-                System.out.println("Description: " + item.description);
-                System.out.println("Priority: " + item.priority);
-                System.out.println("Is Completed? " + item.completed);
+                System.out.println("ID: " + item.id + "\tDescription: " + item.description + "\tPriority: " + item.priority + "\tIs Completed? " + item.completed);
             }
         }
     }
