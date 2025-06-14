@@ -74,13 +74,22 @@ public class Main {
     public static void delete(int id) {
         // Determines if entry is found or not
         boolean found = false;
-        // TODO: Print message if list is empty, to be moved into To Do manager
+
+        if (toDoItems.isEmpty()) {
+            System.out.println("To Do list is empty.");
+            return;
+        }
 
         for (int i = 0; i < toDoItems.size(); i++) {
             if (toDoItems.get(i).id == id) {
                 toDoItems.remove(i);
                 System.out.println("Item ID: " + id + " deleted.");
                 found = true;
+
+                // Shifting remaining ID numbers
+                for (int j = i; j < toDoItems.size(); j++) {
+                    toDoItems.get(j).id = j + 1; // Increments ID's
+                }
                 break;
             }
         }
