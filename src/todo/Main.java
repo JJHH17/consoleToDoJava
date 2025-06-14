@@ -14,7 +14,7 @@ public class Main {
 
         // Creating initial program loop
         while (true) {
-            System.out.println("Add a new item (add), view an existing item (view), or quit (quit)");
+            System.out.println("Add a new item (add), view an existing item (view), delete an item (delete), or quit (quit)");
             String continuePrompt = input.next();
             input.nextLine();
             // Exit criteria of code
@@ -35,6 +35,12 @@ public class Main {
 
                 case "view":
                     view();
+                    break;
+
+                case "delete":
+                    System.out.println("Enter a task ID ");
+                    int idInput = input.nextInt();
+                    delete(idInput);
                     break;
 
                 default:
@@ -65,7 +71,21 @@ public class Main {
     }
 
     // Method for deleting item
-    public static void delete(String id) {
-        System.out.println("placeholder");
+    public static void delete(int id) {
+        // Determines if entry is found or not
+        boolean found = false;
+        // TODO: Print message if list is empty, to be moved into To Do manager
+
+        for (int i = 0; i < toDoItems.size(); i++) {
+            if (toDoItems.get(i).id == id) {
+                toDoItems.remove(i);
+                System.out.println("Item ID: " + id + " deleted.");
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("ID: " + id + "not found.");
+        }
     }
 }
