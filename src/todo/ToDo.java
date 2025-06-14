@@ -35,3 +35,6 @@ public class ToDo {
         System.out.println("Completed? " + this.completed);
     }
 }
+
+// TODO: Add handling of values in methods, user can only enter "complete", "ongoing", or "New" in progress
+// TODO: Ensure user can only enter "p1, p2, p3, p4" entries in priority
