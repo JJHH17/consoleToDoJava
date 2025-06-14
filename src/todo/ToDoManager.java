@@ -34,13 +34,10 @@ public class ToDoManager {
                 toDoItems.remove(i);
                 System.out.println("Item ID: "+ id + " removed");
                 found = true;
-
-                for (int j = i; j < toDoItems.size(); j++) {
-                    toDoItems.get(j).id = j + 1;
-                }
                 break;
             }
         }
+
         // ID not existing check
         if (!found) {
             System.out.println("Task ID: " + id + " not found.");
