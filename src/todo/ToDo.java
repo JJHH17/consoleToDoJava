@@ -2,16 +2,14 @@ package todo;
 
 // Class responsible for adding to do items
 public class ToDo {
+    private static int nextId = 1; // Allows us to dynamically increase new ID
     public int id; // Used for tracking todos
     String description;
     String priority;
     char completed;
 
-    // Private variable for increasing ID
-    private static int incId = 1;
-
     public ToDo(String description, String priority, char completed) {
-        this.id = incId++; // Increments ID
+        this.id = nextId++; // Increments ID
         setDescription(description);
         setPriority(priority);
         setCompleted(completed);
