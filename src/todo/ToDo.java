@@ -2,7 +2,7 @@ package todo;
 
 // Class responsible for adding to do items
 public class ToDo {
-    public final int id; // Used for tracking todos
+    public int id; // Used for tracking todos
     String description;
     String priority;
     char completed;
