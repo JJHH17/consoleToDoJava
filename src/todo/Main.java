@@ -87,7 +87,7 @@ public class Main {
                 found = true;
 
                 // Shifting remaining ID numbers
-                for (int j = i; j < toDoItems.size(); j++) {
+                for (int j = i; j < toDoItems.size(); j++) { // TODO: BUG detected where deleting a single entry item will lead to next entries to start from ID 2
                     toDoItems.get(j).id = j + 1; // Increments ID's
                 }
                 break;
