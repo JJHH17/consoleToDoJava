@@ -55,7 +55,15 @@ public class Main {
     // Method for when "View" is entered by user
     public static void view() {
         for (int i = 0; i < toDoItems.size(); i++) {
-            System.out.println(toDoItems);
-        }
+            ToDo item = toDoItems.get(i); // used to iterate and print
+            System.out.println("Description: " + item.description);
+            System.out.println("Priority: " + item.priority);
+            System.out.println("Is Completed? " + item.completed);
+        } //TODO: Add statement to check if size is 0
+    }
+
+    // Method for deleting item
+    public static void delete(String id) {
+        System.out.println("placeholder");
     }
 }
