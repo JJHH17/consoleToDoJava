@@ -27,9 +27,8 @@ public class Main {
                     System.out.println("Add a Description");
                     String description = input.nextLine();
                     System.out.println("Add a Priority");
-                    String priority = input.next();
+                    String priority = input.nextLine();
                     System.out.println("Is this completed?");
-                    input.nextLine();
                     char completed = input.next().charAt(0);
                     add(description, priority, completed);
                     break;
@@ -54,12 +53,18 @@ public class Main {
 
     // Method for when "View" is entered by user
     public static void view() {
-        for (int i = 0; i < toDoItems.size(); i++) {
-            ToDo item = toDoItems.get(i); // used to iterate and print
-            System.out.println("Description: " + item.description);
-            System.out.println("Priority: " + item.priority);
-            System.out.println("Is Completed? " + item.completed);
-        } //TODO: Add statement to check if size is 0
+        // Checks if list is empty
+        if (toDoItems.isEmpty()) {
+            System.out.println("List is empty.");
+        } else {
+            for (int i = 0; i < toDoItems.size(); i++) {
+                ToDo item = toDoItems.get(i); // used to iterate and print
+                System.out.println("ID: " + item.id);
+                System.out.println("Description: " + item.description);
+                System.out.println("Priority: " + item.priority);
+                System.out.println("Is Completed? " + item.completed);
+            }
+        }
     }
 
     // Method for deleting item
