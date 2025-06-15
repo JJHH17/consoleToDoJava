@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class ToDoManager {
     static ArrayList<ToDo> toDoItems = new ArrayList<>();
 
-    public void addToList(String description, String priority, char completed) {
+    public void addToList(String description, String priority, String completed) {
         var newToDo = new ToDo(description, priority, completed);
         toDoItems.add(newToDo);
     }
