@@ -9,7 +9,7 @@ public class ToDo {
     char completed;
 
     public ToDo(String description, String priority, char completed) {
-        this.id = nextId++; // Increments ID
+        this.id = nextId++;
         setDescription(description);
         setPriority(priority);
         setCompleted(completed);
@@ -20,7 +20,11 @@ public class ToDo {
     }
 
     public void setPriority(String priority) {
-        this.priority = priority;
+        if (priority.equals("high") || priority.equals("medium") || priority.equals("low")) {
+            this.priority = priority;
+        } else {
+            throw new IllegalArgumentException("Invalid priority.Use: high | medium | low");
+        }
     }
 
     public void setCompleted(char completed) {
