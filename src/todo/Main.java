@@ -27,7 +27,7 @@ public class Main {
                 case "add":
                     System.out.println("Add a Description");
                     String description = input.nextLine();
-                    System.out.println("Add a Priority");
+                    System.out.println("Add a Priority: high | medium | low");
                     String priority = input.nextLine();
                     System.out.println("Is this completed?");
                     char completed = input.next().charAt(0);
