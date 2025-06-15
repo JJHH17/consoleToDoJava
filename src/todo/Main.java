@@ -30,7 +30,7 @@ public class Main {
                     System.out.println("Add a Priority: high | medium | low");
                     String priority = input.nextLine();
                     System.out.println("Is this completed?");
-                    char completed = input.next().charAt(0);
+                    String completed = input.next().toLowerCase();
                     manager.addToList(description, priority, completed);
                     break;
 
