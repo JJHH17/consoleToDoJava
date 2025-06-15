@@ -6,9 +6,9 @@ public class ToDo {
     public int id; // Used for tracking todos
     String description;
     String priority;
-    char completed;
+    String completed;
 
-    public ToDo(String description, String priority, char completed) {
+    public ToDo(String description, String priority, String completed) {
         this.id = nextId++;
         setDescription(description);
         setPriority(priority);
@@ -20,15 +20,19 @@ public class ToDo {
     }
 
     public void setPriority(String priority) {
-        if (priority.equals("high") || priority.equals("medium") || priority.equals("low")) {
+        if (priority.equalsIgnoreCase("high") || priority.equalsIgnoreCase("medium") || priority.equalsIgnoreCase("low")) {
             this.priority = priority;
         } else {
-            throw new IllegalArgumentException("Invalid priority.Use: high | medium | low");
+            throw new IllegalArgumentException("Invalid priority. Use: high | medium | low");
         }
     }
 
-    public void setCompleted(char completed) {
-        this.completed = completed;
+    public void setCompleted(String completed) {
+        if (completed.equalsIgnoreCase("yes") || completed.equalsIgnoreCase("no")) {
+            this.completed = completed;
+        } else {
+            throw new IllegalArgumentException("Invalid completion status. Use: yes | no");
+        }
     }
 
     // Fetches Task item
@@ -39,6 +43,3 @@ public class ToDo {
         System.out.println("Completed? " + this.completed);
     }
 }
-
-// TODO: Add handling of values in methods, user can only enter "complete", "ongoing", or "New" in progress
-// TODO: Ensure user can only enter "p1, p2, p3, p4" entries in priority
